@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="costCtrl">
+<span>数量：</span><input type="number" ng-model="quality">
+<span>价格：</span><input type="number" ng-model="price">
+<p>总价：<span ng-bind="quality * price"></span></p>
+<script>
+var app=angular.module("myApp",[]);
+app.controller('costCtrl',function($scope){
+$scope.quality=1;
+$scope.price=9.9;
+});
+</script>
+</body>
+</html>
